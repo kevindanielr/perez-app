@@ -1,0 +1,50 @@
+.title {
+    font-weight: bold;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-page {
+    padding: 60px;
+}
+
+.product-badge {
+	border-radius: 2px;
+	padding: .25em .5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: .3px;
+
+	&.status-instock {
+		background: #C8E6C9;
+		color: #256029;
+	}
+
+	&.status-outofstock {
+		background: #FFCDD2;
+		color: #C63737;
+	}
+
+	&.status-lowstock {
+		background: #FEEDAF;
+		color: #8A5340;
+	}
+}
+
+.card-buttons {
+    text-align: center;
+}
+
+.flex-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.price {
+    font-size: 30px;
+}

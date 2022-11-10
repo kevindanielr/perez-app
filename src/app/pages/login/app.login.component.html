@@ -1,0 +1,53 @@
+<div class="login-body layout-light">
+
+    <form autocomplete="off" (ngSubmit)="login()" [formGroup]="forma">
+
+        <div class="login-content">
+            <div class="night-switch">
+                <p-button styleClass="dark-switch"  icon="pi pi-circle-on" (click)="dark = true"></p-button>
+                <p-button
+                  styleClass="light-switch"
+                  icon="pi pi-circle-off"
+                  (click)="dark = false"></p-button>
+            </div>
+            <div class="login-panel">
+                <div class="login-panel-content">
+                    <h1>Perez's Store</h1>
+                    <p style="font-size: 14px;">Bienvenido, utilice el formulario para iniciar sesión</p>
+                    <div class="forms">
+                        <div class="login-input-wrapper">
+                            <label for="username">Usuario</label>
+                            <input id="username" formControlName="username" pInputText placeholder="Escriba su nombre de usuario..." />
+                            <i class="pi pi-user"></i>
+                        </div>
+    
+                        <div class="login-input-wrapper">
+                            <input id="password" formControlName="username" pInputText placeholder="Escriba su nombre de contraseña." />
+                            <i class="pi pi-lock"></i>
+                        </div>
+  
+
+                        <div class="p-fluid animated fadeIn slow">
+   
+                            <div class="p-field p-grid buttons">
+                                <label for="lastname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0"> </label>
+                                <div class="p-col-12 p-md-12">
+                                    <button  type="submit" pButton label="Iniciar Sesión" class="p-button-primary"> </button>
+                                </div>
+                            </div>
+                
+                        </div>
+                        
+                    </div>
+                    <p style="font-size: 12px;">El acceso al Sistema es sólo para usuarios debidamente autorizados, las interacciones que se realicen quedan debidamente registradas y son auditadas de acuerdo a las disposiciones legales correspondientes.</p>
+                    <br>
+                    <p style="font-size: 12px;">Perez's Store - Made with <i class="pi pi-heart"></i> By Oscar Perez</p>
+                </div>
+            </div>
+
+        </div>
+        
+    </form>
+
+</div>
+<p-toast key="tst" position="bottom-left"></p-toast>

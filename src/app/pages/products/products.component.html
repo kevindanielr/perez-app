@@ -1,0 +1,71 @@
+<div class="landing-body animate__animated animate__fadeIn">
+    <div class="landing-wrapper">
+        <div id="home" class="landing-banner">
+            <div class="landing-banner-content">
+                <span class="title">Pérez's Store</span>
+                <h3>This is the place where you will buy what you don't need.</h3>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-search"></i></span>
+                    <input (keyup)="search($event)" [(ngModel)]="searchTerm" type="text" pInputText
+                        placeholder="Search Products">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="layout-dashboard">
+    <br>
+    <div class="p-grid box">
+        <div class="p-col-12 p-md-8">
+            <div class="notification animate__animated animate__fadeIn">
+
+                <h6>👋
+                    Welcome! Pérez's Store App is a tool to facilitate the search for products and buy easy.
+
+                    Type to show results.
+
+                    If you want to see your orders, go to the <a
+                        [routerLink]="['/shopping-cart']">Orders<i class="pi pi-arrow-up"></i>.</a> section.</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-grid box">
+        <div class="p-col-12 p-md-6 p-lg-6 p-xl-4 box animate__animated animate__fadeIn"
+            *ngFor="let products of [1,1,1,1,1,1,1]">
+
+            <p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '460px'}" styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+                    <img alt="Card" src="https://pasaquina.solutekla.com/photo/1/apple/portatiles/macbook_pro_de_16_pulgadas_gris_espacial/macbook_pro_de_16_pulgadas_gris_espacial_0001">
+                </ng-template>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+                <ng-template pTemplate="footer">
+                    <div class="flex-price">
+                        <span [class]="'price'">$2,000</span>
+                    </div>
+                        <div class="card-buttons p-mt-5">
+                            <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
+                            <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
+                            <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                        </div>
+                </ng-template>
+            </p-card>
+
+        </div>
+
+        
+
+        
+    </div>
+
+</div>
+
+<ng-template #customLoadingTemplate>
+    <app-loading></app-loading>
+</ng-template>
+
+<!-- <ngx-loading [show]="loading" [template]="customLoadingTemplate"></ngx-loading> -->
